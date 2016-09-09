@@ -1,12 +1,14 @@
-# log4js-syslog-appender
+# mc-log4js-syslog-appender based on log4js-syslog-appender
 
 This is a syslog appender for log4js. It is a rewrite of https://www.npmjs.com/package/log4js-node-syslog. It uses ain2 (https://github.com/phuesler/ain) again since node-syslog does not work with the latest versions of node. 
+
+It uses fixed glossy (https://github.com/pavkriz/glossy) library for producing correct syslog messages. 
 
 log4js-syslog-appender works with node versions 0.10.x, 0.11.x and 0.12.x. 
 
 ## Installation
 
-	npm install log4js-syslog-appender --save
+	npm install pavkriz/mc-log4js-syslog-appender --save
 
 ## Configuration
 
@@ -15,7 +17,7 @@ In your log4js config you can use the following configuration:
 ### UDP
 
 	"appender": {
-		"type": "log4js-syslog-appender",
+		"type": "mc-log4js-syslog-appender",
 		"tag": "YOUR LOG TAG",
 		"facility": "local0",
 		"hostname": "localhost",
@@ -34,7 +36,7 @@ Options:
 ### Socket
 
 	"appender": {
-		"type": "log4js-syslog-appender",
+		"type": "mc-log4js-syslog-appender",
 		"tag": "YOUR LOG TAG",
 		"facility": "local0",
 		"path": "/dev/log",
@@ -55,7 +57,7 @@ s
 	log4js.configure({
     	appenders: [ 
         { 
-            type: 'log4js-syslog-appender', 
+            type: 'mc-log4js-syslog-appender', 
             tag: 'My API', 
             facility: 'local0', 
             hostname: 'localhost', 

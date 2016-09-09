@@ -1,7 +1,7 @@
 {
-    "name": "log4js-syslog-appender",
+    "name": "mc-log4js-syslog-appender",
     "version": "0.3.0",
-    "description": "syslog appender for log4js",
+    "description": "syslog appender for log4js, based on log4js-syslog-appender",
     "main": "index.js",
     "homepage": "https://github.com/m-reiniger/log4js-syslog-appender",
     "repository": {
@@ -24,6 +24,9 @@
         "name": "Michael Reiniger",
         "email": "m.reiniger@silverorbit.de"
     },
+    "contributors" : [
+        { "name": "Pavel Kriz", "email": "pavkriz@hkfree.org" }
+    ],
     "license": "MIT",
     "directories": {
         "test": "test",
