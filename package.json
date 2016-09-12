@@ -34,7 +34,8 @@
     },
     "dependencies": {
         "ain2": "^2.0.0",
-        "log4js": "^0.6.36"
+        "log4js": "^0.6.36",
+        "glossy": "pavkriz/glossy#v0.1.7.1"
     },
     "devDependencies": {
         "mocha": "2.1.0",

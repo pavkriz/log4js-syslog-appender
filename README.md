@@ -4,7 +4,9 @@ This is a syslog appender for log4js. It is a rewrite of https://www.npmjs.com/p
 
 It uses fixed glossy (https://github.com/pavkriz/glossy) library for producing correct syslog messages. 
 
-log4js-syslog-appender works with node versions 0.10.x, 0.11.x and 0.12.x. 
+log4js-syslog-appender works with node versions 0.10.x, 0.11.x and 0.12.x.
+ 
+NOTE: Tests are not accommodated to mc-log4js-syslog-appender.
 
 ## Installation
 
@@ -22,7 +24,8 @@ In your log4js config you can use the following configuration:
 		"facility": "local0",
 		"hostname": "localhost",
 		"port": 514,
-		"transport": "UDP"
+		"transport": "UDP",
+		"rfc": "RFC5424"
     }
 
 Options:
@@ -32,6 +35,7 @@ Options:
 * `hostname`: hostname of your syslog server / default: `localhost`
 * `port`: port of your syslog server / default: `514`
 * `transport`: how to connect to syslog server / default: `UDP`
+* `rfc`: RFC to conform to; RFC3164 or RFC5424 / default: `RFC5424`
 
 ### Socket
 
@@ -40,7 +44,8 @@ Options:
 		"tag": "YOUR LOG TAG",
 		"facility": "local0",
 		"path": "/dev/log",
-		"transport": "socket"
+		"transport": "socket",
+		"rfc": "RFC5424"
     }
     
 Options:
@@ -49,7 +54,8 @@ Options:
 * `facility`: your syslog facility / default: `local0`
 * `path`: path to your syslog socket / default: `/dev/log`
 * `transport`: how to connect to syslog server / default: `UDP`
-s
+* `rfc`: RFC to conform to; RFC3164 or RFC5424 / default: `RFC5424`
+
 ## Example:
 
 	var log4js = require('log4js');
